@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Purpose: entry point for the dependency-free, GitHub Pages-safe portfolio prototype. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A static portfolio concept for AI-guided newcomer planning." />
+    <title>Newcomer Compass | Portfolio prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Senior PM portfolio concept</p>
+        <h1>Newcomer Compass</h1>
+        <p class="lede">Choose one small step for feeling at home in a new place.</p>
+        <p class="disclosure" role="note">
+          Illustrative static prototype — no live AI, local search, accounts, or data collection.
+        </p>
+      </header>
+
+      <section class="goal-section" aria-labelledby="goal-heading">
+        <div>
+          <p class="section-label">Start with your goal</p>
+          <h2 id="goal-heading">What would feel most useful today?</h2>
+        </div>
+        <div class="goal-grid" role="group" aria-label="Choose a settling-in goal">
+          <button class="goal-card is-selected" type="button" data-goal="orient" aria-pressed="true">
+            <span class="goal-icon" aria-hidden="true">◎</span>
+            <span>Get oriented</span>
+            <small>Make your first week feel less unfamiliar.</small>
+          </button>
+          <button class="goal-card" type="button" data-goal="connect" aria-pressed="false">
+            <span class="goal-icon" aria-hidden="true">◌</span>
+            <span>Meet people</span>
+            <small>Find a low-pressure way to connect.</small>
+          </button>
+          <button class="goal-card" type="button" data-goal="essentials" aria-pressed="false">
+            <span class="goal-icon" aria-hidden="true">✓</span>
+            <span>Set up essentials</span>
+            <small>Turn a practical task into a first action.</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="response-card" aria-labelledby="response-heading" aria-live="polite">
+        <div class="response-topline">
+          <p class="section-label">Your compass point</p>
+          <button class="reset-button" type="button" id="reset-button">Reset</button>
+        </div>
+        <p class="response-context" id="response-context">Illustrative response for: Get oriented</p>
+        <h2 id="response-heading">Take one familiar walk</h2>
+        <p id="response-summary">Choose a short route near where you are staying and notice two places you may want to revisit.</p>
+
+        <div class="why-box">
+          <h3>Why this may help</h3>
+          <p id="response-why">Repeating a simple route can make a new area feel more predictable without requiring a big commitment.</p>
+        </div>
+
+        <div class="checklist-wrap">
+          <div class="checklist-heading">
+            <h3>A small checklist</h3>
+            <output id="progress-status" aria-live="polite">0 of 3 complete</output>
+          </div>
+          <ul id="checklist" class="checklist"></ul>
+        </div>
+        <p class="safety-note" id="safety-note"></p>
+      </section>
+
+      <footer>
+        <p>For urgent safety concerns, contact local emergency services. For legal, immigration, medical, or financial questions, use official sources or a qualified professional.</p>
+        <p><a href="../README.md">Read the case-study documentation</a></p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
